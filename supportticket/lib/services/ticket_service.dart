@@ -6,7 +6,8 @@ import 'auth_service.dart';
 
 /// Service for handling ticket API calls
 class TicketService {
-  static const String baseUrl = ApiConfig.baseUrl;
+  // Cannot be const because ApiConfig.baseUrl is resolved at runtime
+  static final String baseUrl = ApiConfig.baseUrl;
 
   final AuthService _authService = AuthService();
 
